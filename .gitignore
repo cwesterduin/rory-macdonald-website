@@ -70,4 +70,4 @@ yarn-error.log
 
 # static and images
 /static
-src/pages/paintings
+/src/pages/paintings
