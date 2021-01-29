@@ -1,0 +1,37 @@
+.button {
+  background: none;
+  border: 0;
+  color: #aaa;
+  width:auto;
+  height: 48px;
+  width: 48px;
+  font-size: 32px;  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.back {
+  text-align: right;
+  padding-right: 12px;
+}
+.skip {
+  text-align: left;
+  padding-left: 12px;
+}
+
+.button:hover {
+  color:white;
+}
+
+.skip:hover {
+}
+
+
+.button:focus {
+  color:white;
+}
+
+.skip:focus {
+}

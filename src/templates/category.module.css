@@ -1,0 +1,39 @@
+.title {
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 18px;
+  text-align: center;
+}
+
+.titleCont {
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  height:48px;
+  margin-left: -48px
+}
+
+.availableTitleCont {
+  margin-left: 0
+}
+
+.backButton {
+  width: 48px;
+  height: 48px;
+  color: #aaa;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  z-index: 999;
+  display:flex;
+  justify-content:center;
+  line-height: 45px;
+}
+
+.backButton:hover, .backButton:focus {
+  color: #fff;
+  border-color: #888;
+}

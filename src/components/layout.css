@@ -1,0 +1,255 @@
+:root {
+  --main-bg-color: rgb(18, 18, 15);
+  --main-font-color: white;
+  --main-border-color: #222;
+}
+
+*:focus {
+  outline-color: rgba(255,255,255,0.33);
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Unicode", "Helvetica", "Arial", "sans-serif";
+  font-weight: 100;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+
+header {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 120px;
+  z-index:997;
+  background: var(--main-bg-color);
+}
+
+header>a {
+  text-decoration: none;
+  padding: 12px 12px
+}
+header>a>h1 {
+  color:white;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+nav {
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+nav>a {
+  color: #888;
+  padding: 16px 0;
+  text-decoration: none;
+  width: 33.3%;
+  min-width: 200px;
+  /* border-top: solid transparent 1px;
+  border-bottom: 1px solid transparent; */
+  font-weight: 100;
+  transition: color .5s;
+}
+
+nav>a.active {
+  color:white;
+}
+
+.preNav {
+  outline: none;
+}
+
+nav>a:hover {
+  /* border-bottom: 1px solid #aaa; */
+  color:white;
+}
+
+nav>a:focus {
+  color:white;
+}
+
+nav>a:first-of-type {
+  border-top: none;
+}
+
+
+.subLink>a {
+  color: white;
+  position:relative;
+  padding: 12px 12px;
+  text-decoration: none;
+  width: 33.3%;
+  min-width: 200px;
+  /* border-top: solid #222 1px;
+  border-bottom: 1px solid transparent; */
+}
+
+.subLink {
+  color:#888;
+  font-size: 16px
+}
+
+.subLink::before {
+  content: "series : ";
+  font-size: 12px;
+  color: #666;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position:fixed;
+  width: 24px;
+  height: 24px;
+  right: 48px;
+  top: 50px;
+}
+
+.bm-burger-button>button {
+  position: absolute;
+    left: -24px !important;
+    top: -24px !important;
+    width: calc(100% + 24px) !important;
+    height: calc(100% + 24px) !important;
+    margin: 12px !important;
+    background: rgba(9, 9, 6,0.3) !important;
+    border-radius:5px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #fff;
+  height: 1px !important;
+}
+
+.bm-burger-bars:hover {
+  background: #aaa;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: white;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  top: 50px !important;
+  right: 48px !important;
+  transform: scale(1.5)
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #aaa;
+  width:2px !important
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top:0;
+  transition: 1s ease-in-out 0s !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: rgb(9,9,6);
+  font-size: 18px;
+
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  position: fixed;
+  opacity: 0.66;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pageContainer {
+  transition: opacity 1s ease-in;
+  min-height: calc(100vh - 120px);
+}
+
+
+.gatsby-image-wrapper{
+  box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 3px 2px;
+  height: 100%;
+  width: 100%;
+  }
+
+footer {
+  border-top: solid var(--main-border-color) 1px;
+  padding: 12px 48px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+.fade-in-section-vis {
+  visibility: visible;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+}
+
+.subContainer > .fade-in-section, .fade-in-section  {
+  opacity: 0;
+  transform: translateY(4vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+
+.subContainer:nth-of-type(2n) > .fade-in-section {
+  opacity: 0;
+  transform: translateY(8vh);
+  visibility: hidden;
+  transition: opacity 0.8s ease-out, transform 1.3s ease-out;
+  will-change: opacity, visibility;
+}
+
+.subContainer > .fade-in-section.is-visible, .fade-in-section-vis.is-visible, .fade-in-section.is-visible  {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}

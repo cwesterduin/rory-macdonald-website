@@ -1,0 +1,177 @@
+.extraCont {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.extra {
+  width: 64px;
+  height: 64px;
+  margin: 6px;
+  margin-bottom: 0;
+  border: solid transparent 1px;
+  background: black;
+  z-index: 1;
+}
+
+.extra.selected {
+border: solid #ddd 1px;
+}
+
+.extra:focus {
+  border: solid #666 1px;
+  outline: none;
+}
+
+.extra img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.paintingTitle {
+  text-transform: capitalize;
+  color: #ccc
+}
+
+.titleCont * {
+  padding: 0 0
+}
+
+.titleCont {
+  padding-bottom: 24px;
+  transition: 1s ease-out;
+}
+
+.title {
+  padding-top:16px;
+  padding-bottom:8px;
+  font-size: 16px
+}
+
+.date {
+  padding: 6px;
+  font-size: 14px;
+  color: #999
+}
+
+.info {
+  padding: 6px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  color: #999
+}
+
+.navButton {
+  width: 48px;
+  height: 48px;
+  color: #888;
+  text-decoration: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.navButton:hover, .navButton:focus {
+  color:#ccc;
+}
+
+.image {
+height:auto;
+box-shadow: rgba(0, 0, 0, 0.33) 0px 1px 3px 2px;
+}
+
+.image_small {
+  max-width: 400px;
+}
+
+.image_smaller {
+  max-width: 400px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .image {
+    width: 100% !important
+  }
+}
+
+.imageShow {opacity: 1}
+
+.imageHide {opacity:0}
+
+.backButton {
+  width: 48px;
+  height: 48px;
+  color: #888;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  font-size: 24px;
+  z-index: 999;
+  left:calc(25% - 48px);
+  top: 72px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.zoomButton {
+  background: transparent;
+  color: #888;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-content:center;
+  justify-content:center;
+  height: 48px;
+  width:48px;
+  position:absolute;
+  font-size:32px;
+  left:calc(25% - 48px);
+}
+
+.zoomButton_hide {
+  display: none;
+}
+
+.small {
+  position:relative;
+  font-size: 18px;
+}
+
+.left {
+  left: 2px
+}
+
+.backButton:hover, .backButton:focus, .zoomButton:hover, .zoomButton:focus {
+  color: #fff;
+  border-color: #888;
+}
+
+/* small devices (600px and down) */
+@media only screen and (max-width: 600px) {
+  .backButton {
+    left: 2px
+  }
+  .zoomButton {
+    display:none;
+  }
+}
+
+.priceInfo {
+  padding: 14px;
+  color: #ccc
+}
+
+.sold {
+  color:#ca1c1c;
+  font-weight: bold;
+  text-transform: uppercase;
+}

@@ -1,0 +1,24 @@
+.shareButton:focus, .shareButton:hover, .shareButtonToggle:focus, .shareButtonToggle:hover {
+  opacity: 1;
+}
+
+.shareButtonCont {
+  transition: opacity 1s;
+}
+
+.shareButton {
+  opacity:0.6;
+  padding: 4px 6px !important;
+}
+
+.shareButtonToggle {
+  color: #fff;
+  opacity:0.6;
+  background: var(--main-bg-color);
+  border: none;
+  padding: 4px 12px !important;
+  cursor: pointer;
+  height: 42px;
+  margin: 6px;
+  font-size: 16px
+}

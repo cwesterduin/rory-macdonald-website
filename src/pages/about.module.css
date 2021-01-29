@@ -1,0 +1,65 @@
+.content {
+  text-align: center;
+  padding-bottom: 2em;
+  font-size: 16px;
+}
+
+.section:not(.one) {
+  padding-top: 2em;
+}
+
+.header {
+  color: #ddd;
+  text-transform: uppercase;
+}
+
+.para, .para_timeline  {
+  color: #aaa;
+  padding: 1em;
+  line-height: 2;
+  text-align:left;
+
+}
+
+.para{
+  font-size: 16px;
+}
+
+ td, tr {
+   color: #aaa;
+   line-height: 1.5;
+   padding: 0.5em 1em;
+   text-align:left;
+ }
+
+ tr {   text-align:center;
+}
+
+
+ table {
+   padding: 1em;
+   font-size: 16px;
+   text-align:center;
+   margin: 0 auto;
+   line-height: 2;
+
+}
+
+.para{
+  font-size: 16px;
+}
+
+
+.works_item > li {
+  color: #aaa;
+  line-height: 2;
+  text-align:left;
+  font-size: 16px;
+
+}
+
+.timeline_header {
+  margin: 0 auto;
+  padding: 1em;
+  color: #ccc;
+}
