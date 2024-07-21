@@ -1,8 +1,8 @@
 import React from 'react'
 import paintingStyles from "../pages/painting.module.css"
 import { Link } from "gatsby"
-import Image from "../components/Image"
-import FadeInSection from "../components/FadeInSection"
+import Image from "./Image"
+import FadeInSection from "./FadeInSection"
 
 
 function Category(props) {

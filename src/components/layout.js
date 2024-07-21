@@ -10,7 +10,7 @@ import {
   TwitterIcon
 } from "react-share";
 
-import { myContext } from '../components/PageContext';
+import { myContext } from './PageContext';
 
 
 

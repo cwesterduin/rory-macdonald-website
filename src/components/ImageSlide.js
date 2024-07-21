@@ -1,9 +1,9 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import imageSlideStyles from "./imageSlide.module.css"
-import SlideControls from '../components/SlideControls'
+import SlideControls from './SlideControls'
 import { Link } from "gatsby"
 import "./layout.css"
-import Image from "../components/Image"
+import Image from "./Image"
 
 
 function ImageSlide(props) {
