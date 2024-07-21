@@ -24,6 +24,19 @@ function Category({pageContext: {category}}) {
     e.changeParentPage(false)
   }
 
+  function getName() {
+    switch (category.name) {
+      case "selected-works":
+        return "selected works";
+      case "sale":
+        return "sale";
+      case "studio-paintings":
+        return "studio paintings";
+      default:
+        return `${category.name} series`;
+    }
+  }
+
   return (
     <>
     <Helmet htmlAttributes={{ lang : 'en-uk' }}>
@@ -45,7 +58,7 @@ function Category({pageContext: {category}}) {
 
     <div className={categoryStyles.titleCont}>
     <Link className={categoryStyles.backButton} to={`../../painting#${category.name}`} aria-label={`back to paintings`}>&times;</Link>
-    <h2 className={categoryStyles.title}>{category.name} series</h2>
+    <h2 className={categoryStyles.title}>{getName()}</h2>
     </div>
 
     <ImageGrid series={category.name}/>

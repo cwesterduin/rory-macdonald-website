@@ -15,12 +15,13 @@ import { useSwipeable } from "react-swipeable";
 import "../components/layout.css"
 
 import paintingStyles from "./painting.module.css"
+import paintings from "../../static/data/paintings.json"
 
-function NoData({pageContext: {image, repositories}}) {
+function NoData({pageContext: {image, paintings}}) {
 
 
   const paintingContext = useContext(myContext);
-  let data = repositories
+  let data = paintings
   let nextData
   let prevData
   let nextPainting
@@ -31,6 +32,7 @@ function NoData({pageContext: {image, repositories}}) {
       if (parentPage) {
         const parentCategory = parentPage.slice(0,parentPage.indexOf('#'))
           if (parentCategory === 'selected-works') {
+            data = data.filter(item => !item.deselected)
             let currentPosition = data.findIndex(item => item.name === image.name)
             prevData = data.slice(
             	0,
@@ -76,8 +78,8 @@ function NoData({pageContext: {image, repositories}}) {
 
 
   const handlers = useSwipeable({
-  onSwipedLeft: () => navigate(`/painting/${nextPainting.name.replace(/ /g,"-")}`),
-  onSwipedRight: () => navigate(`/painting/${prevPainting.name.replace(/ /g,"-")}`),
+  onSwipedLeft: nextPainting ? () => navigate(`/painting/${nextPainting.name.replace(/ /g,"-")}`) : null,
+  onSwipedRight: prevPainting ? () => navigate(`/painting/${prevPainting.name.replace(/ /g,"-")}`) : null,
   preventDefaultTouchmoveEvent: true,
   trackMouse: true
  });
@@ -133,7 +135,6 @@ function NoData({pageContext: {image, repositories}}) {
     <meta property="twitter:site" content="@twitter"/>
     <meta property="twitter:title" content="Rory Macdonald"/>
     <meta property="twitter:description" content={image.name}/>
-    <meta name="twitter:creator" content="@Joe84996716" />
 
 
       <link rel="canonical" href="" />

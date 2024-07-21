@@ -5,15 +5,7 @@ import Layout from "../components/layout"
 import paintingStyles from "./painting.module.css"
 import { Link } from "gatsby"
 
-const categories =
-  [
-    {name: '2024', defaultImg: 'the voyager', description: 'description...'},
-    {name: '2023', defaultImg: 'the river of dreams', description: 'description...'},
-    {name: '2022', defaultImg: 'this charming man', description: 'description...'},
-    {name: '2021', defaultImg: 'free spirit', description: 'description...'},
-    {name: '2020', defaultImg: 'waiting for the ferry man', description: 'description...'},
-    {name: '2019', defaultImg: 'first flight', description: 'description...'}
-  ]
+const categories = require("../../static/data/categories.json")
 
 function Painting() {
   const [loaded, setLoaded] = useState(false)
@@ -24,7 +16,7 @@ function Painting() {
   },50)
   },)
 
-  const categoryList = categories.map((category,index) =>
+  const categoryList = categories.filter(category => category.series).map((category,index) =>
   <Category name={`${category.name}`} link={category.name} description={category.description} src={`${category.defaultImg}.jpg`} index={index}/>
   )
 
@@ -45,8 +37,6 @@ function Painting() {
   </Helmet>
   <Layout>
   <div className={paintingStyles.cont} Style={loaded ? `opacity:1` : `opacity:0`}>
-
-  <Category id="selected works" name="selected works" link='selected works' description={""} src='the duke.jpg'/>
 
   {categoryList}
 
